@@ -34,28 +34,28 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Video Game App',
+      title: 'Game Showcase',
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        primaryColor: Color(0xFF171A21),
+        primaryColor: const Color(0xFF171A21),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Video Game App'),
+          title: const Text('Game Showcase'),
         ),
         body: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
                 children: [
-                  Text('Filter by Publisher: '),
-                  SizedBox(width: 10.0),
+                  const Text('Filter by Publisher: '),
+                  const SizedBox(width: 10.0),
                   DropdownButton<String>(
                     value: _selectedPublisher,
                     items: [
-                      DropdownMenuItem<String>(
+                      const DropdownMenuItem<String>(
                         value: 'All',
                         child: Text('All'),
                       ),

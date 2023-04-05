@@ -9,6 +9,10 @@ final List<Game> games = [
     'The Legend of Zelda: Breath of the Wild is an action-adventure game developed and published by Nintendo. The game was released for the Nintendo Switch and Wii U consoles on March 3, 2017.',
     imagepath: 'assets/images/zelda.jpg',
     rating: 4.5,
+    img1: 'assets/images/lorem.jpg',
+    img2: 'assets/images/lorem.jpg',
+    img3: 'assets/images/lorem.jpg',
+    img4: 'assets/images/lorem.jpg',
   ),
   Game(
     title: 'Horizon Zero Dawn',
@@ -17,5 +21,9 @@ final List<Game> games = [
     'Horizon Zero Dawn is an action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The game was released for the PlayStation 4 console in 2017.',
     imagepath: 'assets/images/horizon.jpg',
     rating: 3.0,
+    img1: 'assets/images/lorem.jpg',
+    img2: 'assets/images/lorem.jpg',
+    img3: 'assets/images/lorem.jpg',
+    img4: 'assets/images/lorem.jpg',
   ),
 ];
