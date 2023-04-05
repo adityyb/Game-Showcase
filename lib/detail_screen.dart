@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:game_showcase/game.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'game.dart';
 
 class DetailScreen extends StatelessWidget {
   final Game game;
@@ -9,53 +11,59 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(game.title),
       ),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
+            SizedBox(
+              height: 480,
               child: Image.asset(
                 game.imagepath,
                 fit: BoxFit.cover,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     game.title,
                     style: const TextStyle(
+                      color: Colors.white,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 5),
                   Row(
                     children: [
-                      const Icon(Icons.star, color: Colors.yellow, size: 16),
-                      const SizedBox(width: 4),
+                      const Icon(Icons.star, color: Colors.amber, size: 20),
+                      const SizedBox(width: 5),
                       Text(
-                        game.rating.toString(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                        game.rating.toStringAsFixed(1),
+                        style: TextStyle(
+                          color: Colors.white,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 10),
                   Text(
                     game.description,
-                    style: const TextStyle(fontSize: 16),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
             ),
+            const SizedBox(height: 10),
             Container(
               height: 150,
               child: ListView(
@@ -64,10 +72,10 @@ class DetailScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         game.img1,
-                        width: 150,
+                        width: 240,
                         height: 150,
                         fit: BoxFit.cover,
                       ),
@@ -76,10 +84,10 @@ class DetailScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         game.img2,
-                        width: 150,
+                        width: 240,
                         height: 150,
                         fit: BoxFit.cover,
                       ),
@@ -88,10 +96,10 @@ class DetailScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         game.img3,
-                        width: 150,
+                        width: 240,
                         height: 150,
                         fit: BoxFit.cover,
                       ),
@@ -100,10 +108,10 @@ class DetailScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         game.img4,
-                        width: 150,
+                        width: 240,
                         height: 150,
                         fit: BoxFit.cover,
                       ),
@@ -112,6 +120,24 @@ class DetailScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: 120,
+              child: ElevatedButton(
+                onPressed: () {
+                  launch(game.requirement);
+                },
+                child: const Text('View System Requirements'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

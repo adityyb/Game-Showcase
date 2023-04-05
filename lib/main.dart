@@ -35,10 +35,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Game Showcase',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-        primaryColor: const Color(0xFF171A21),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      theme: ThemeData.dark(
+        //primarySwatch: Colors.grey,
+        //primaryColor: const Color(0xFF171A21),
+        //visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
         appBar: AppBar(
