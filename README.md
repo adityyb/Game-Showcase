@@ -1,3 +1,3 @@
 # Incoming Project Description
 
-<img src="lib/assets/ganyu.gif">
+<img src="assets/ganyu.gif">
