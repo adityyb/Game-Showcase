@@ -164,7 +164,7 @@ final List<Game> games = [
     title: 'Borderlands 3',
     publisher: '2K',
     description:
-    '',
+    'Borderlands 3 is a 2019 action role-playing first-person shooter video game developed by Gearbox Software and published by 2K. It is a sequel to 2012s Borderlands 2, and the fourth entry in the main Borderlands series.',
     imagepath: 'assets/images/border.jpg',
     rating: 5.0,
     img1: 'assets/images/border1.jpg',
@@ -174,17 +174,17 @@ final List<Game> games = [
     requirement: 'https://www.systemrequirementslab.com/cyri/requirements/borderlands-3/15611',
   ),
   Game(
-    title: 'Just Cause 3',
-    publisher: 'Square Enix',
+    title: 'God of War',
+    publisher: 'Sony Interactive Entertainment',
     description:
-    '',
-    imagepath: 'assets/images/jc.jpg',
-    rating: 5.0,
-    img1: 'assets/images/jc1.jpg',
-    img2: 'assets/images/jc2.jpg',
+    'God of War is an action-adventure game franchise created by David Jaffe at Sony Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console and has become a flagship series for PlayStation, consisting of nine installments across multiple platforms.',
+    imagepath: 'assets/images/gow.jpg',
+    rating: 4.6,
+    img1: 'assets/images/gow1.jpg',
+    img2: 'assets/images/gow2.jpg',
     img3: 'assets/images/coming.png',
     img4: 'assets/images/coming.png',
-    requirement: 'https://www.google.com/',
+    requirement: 'https://www.systemrequirementslab.com/cyri/requirements/god-of-war/21298',
   ),
 
 ];
