@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'game.dart';
+import 'system_requirements_button.dart';
 
 class DetailScreen extends StatelessWidget {
   final Game game;
@@ -121,21 +122,8 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            SizedBox(
-              width: 120,
-              child: ElevatedButton(
-                onPressed: () {
-                  launch(game.requirement);
-                },
-                child: const Text('View System Requirements'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
-              ),
+            SystemRequirementsButton(
+              requirementUrl: game.requirement,
             ),
             const SizedBox(height: 40),
           ],

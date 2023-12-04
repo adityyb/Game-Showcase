@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:game_showcase/game.dart';
 
 final List<Game> games = [
